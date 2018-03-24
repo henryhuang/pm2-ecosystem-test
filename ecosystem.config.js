@@ -30,7 +30,10 @@ module.exports = {
             ref: 'origin/master',
             repo: 'git@github.com:henryhuang/pm2-ecosystem-test.git',
             path: '/usr/local/share/www/www.one.com',
-            'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
+            'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+            env: {
+                PORT: 3000,
+            }
         },
         dev: {
             user: 'root',
@@ -40,7 +43,8 @@ module.exports = {
             path: '/usr/local/share/www/dev.one.com',
             'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env dev',
             env: {
-                NODE_ENV: 'dev'
+                NODE_ENV: 'dev',
+                PORT: 4000,
             }
         }
     }

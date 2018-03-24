@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 
+const port = process.env.PORT || 3000;
+const env = process.env.NODE_ENV;
+
 app.get('/', (req, res) => {
-    res.send('It works! It\'s dev!');
+    res.send(`It works! It\'s ${env}!`);
 });
 
-app.listen(4000, () => {
-    console.log('Listening 4000...');
+app.listen(port, () => {
+    console.log(`Listening ${port}...`);
 });
