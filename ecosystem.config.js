@@ -35,7 +35,7 @@ module.exports = {
         dev: {
             user: 'root',
             host: '192.168.99.100',
-            ref: 'origin/dev',
+            ref: 'dev',
             repo: 'git@github.com:henryhuang/pm2-ecosystem-test.git',
             path: '/usr/local/share/www/dev.one.com',
             'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env dev',
