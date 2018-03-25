@@ -7,7 +7,7 @@ module.exports = {
         production: {
             user: 'root',
             host: '192.168.99.100',
-            ref: 'origin/master',
+            ref: 'bb/master',
             repo: 'git@bitbucket.org:imluckyman/pm2-ecosystem-test.git',
             path: '/usr/local/share/www/www.one.com',
             'post-deploy': 'npm install && pm2 reload pm2.www.config.js --env production',
@@ -18,7 +18,7 @@ module.exports = {
         dev: {
             user: 'root',
             host: '192.168.99.100',
-            ref: 'origin/dev',
+            ref: 'bb/dev',
             repo: 'git@bitbucket.org:imluckyman/pm2-ecosystem-test.git',
             path: '/usr/local/share/www/dev.one.com',
             'post-deploy': 'npm install && pm2 reload pm2.dev.config.js --env dev',
